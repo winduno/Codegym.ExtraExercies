@@ -9,7 +9,7 @@
 </body>
 </html>
 <script>
-    let value = prompt("Nhập 1 số đi anh zai!!", 0);
+    let value = parseFloat(prompt("Nhập 1 số đi anh zai!!"));
 
     // if (value > 0){
     //     alert(1);
@@ -23,14 +23,18 @@
 
     let condition = true;
     switch (condition) {
-        case (value < 0):
+        case (value < 0 && value.isInteger):
             document.write("Số âm");
             break;
-        case (value > 0):
+        case (value > 0 && value.isInteger):
             document.write("Số dương");
             break;
-        default:
+        case (value == 0 && value.isInteger):
             document.write("Số 0");
             break;
+        default:
+            document.write("Ca này chịu!!");
+            break;
+
     }
 </script>
