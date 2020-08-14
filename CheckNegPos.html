@@ -23,13 +23,13 @@
 
     let condition = true;
     switch (condition) {
-        case (value < 0 && value.isInteger):
+        case (value < 0 && Number.isInteger(value)):
             document.write("Số âm");
             break;
-        case (value > 0 && value.isInteger):
+        case (value > 0 && Number.isInteger(value)):
             document.write("Số dương");
             break;
-        case (value == 0 && value.isInteger):
+        case (value == 0 && Number.isInteger(value)):
             document.write("Số 0");
             break;
         default:
